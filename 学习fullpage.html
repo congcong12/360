@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 
+
+        使用步骤：
+                1.导入文件  css,jquery,fullpage.js 记得fullpage要导入在jQuery的后面
+                2.准备html
+                        先准备一个大div
+                            然后这个大div放小div，小div的类必须叫section，有几个这样的div就代表有几屏
+                        不需要记直接复制就可以了
+                3.调用初始化代码
+                        找到大div，调用fullpage这个方法
+    -->
+
+    <!-- 导入css -->
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <!-- 导入jQuery -->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <!-- 导入fullpage.js -->
+    <script src="js/jquery.fullPage.min.js"></script>
+
+
+    <!-- <style>
+        .section:nth-child(1) {
+
+            background-color: #f00;
+        }
+
+        .section:nth-child(2) {
+
+            background-color: #0f0;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <div id="xxoo">
+
+        <div class="section section1">
+            <h3>第一屏</h3>
+        </div>
+        <div class="section section2">
+            <h3>第二屏</h3>
+        </div>
+        <div class="section">
+            <h3>第三屏</h3>
+        </div>
+        <div class="section">
+            <h3>第四屏</h3>
+        </div>
+
+        <div class="section">
+            <h3>第五屏</h3>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    $('#xxoo').fullpage({
+
+        navigation: true,
+        loopBottom: true,
+        loopTop: true,
+        sectionsColor: ['#f00','#0f0','#00f'],
+        // 当滚出某一屏后触发,参数2：得到被滚出来的屏幕的页数，从1开始
+        afterLoad:function(a,index){
+
+            console.log(a,index);
+            
+        }
+    });
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 
+        img标签缩放时是整个图片一起缩放
+
+        但是如果用div的背景图片来缩放，那么是一点一点显示出来
+
+     -->
+
+    <style>
+        body{
+
+            background-color: black;
+        }
+        img{
+            width: 100px;
+        }
+
+        div{
+            width: 99px;
+            height: 22px;
+            background: url(images/key.png) no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/key.png" alt="">
+
+
+    <div></div>
+</body>
+</html>

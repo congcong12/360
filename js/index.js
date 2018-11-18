@@ -1,0 +1,9 @@
+$(function(){
+    $('#product').fullpage({
+        navigation:true,
+        sectionsColor:['red','green','red','black','skyblue'],
+        afterLoad(a,index){
+            $('.section').removeClass('animation').eq(index-1).addClass('animation');
+        }
+    })
+})
